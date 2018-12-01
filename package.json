@@ -13,7 +13,12 @@
   "files": [
     "src/*",
     "templates/*",
-    "index.js"
+    "index.js",
+    ".eslintignore",
+    ".eslintrc.js",
+    "prettier.config.js",
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
