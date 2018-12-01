@@ -4,16 +4,8 @@ An opinionated Vue.js project boilerplate for Apps, Components, and Component Li
 
 ## Install
 
-npm Install
-
 ```javascript
-npm install -g @nuebuild/vue-project
-```
-
-Yarn Install
-
-```javascript
-yarn add -g @nuebuild/vue-project
+npm install -g @nuebuild/vue-projects
 ```
 
 ## Usage
