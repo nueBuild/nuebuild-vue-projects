@@ -13,7 +13,7 @@ npm install -g @neubuild/vue-project
 Yarn Install
 
 ```javascript
-yarn install -g @neubuild/vue-project
+yarn add -g @neubuild/vue-project
 ```
 
 ## Usage
