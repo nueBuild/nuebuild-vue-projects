@@ -2,6 +2,10 @@
   "name": "@nuebuild/vue-projects",
   "version": "1.0.2",
   "description": "An opinionated Vue.js project boilerplate for Apps, Components, and Component Libraries",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/nueBuild/nuebuild-vue-projects"
+  },
   "main": "index.js",
   "bin": {
     "nuebuild-vue": "./index.js"
