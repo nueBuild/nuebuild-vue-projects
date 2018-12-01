@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+// ========================================
+// Accessibility
+// ========================================
+.screen-reader-text {
+  position: absolute;
+  width: px-to-rem(1);
+  height: px-to-rem(1);
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+
+  &:focus {
+    @include font-size(0.875);
+
+    top: 5px;
+    left: 5px;
+    z-index: 100000;
+    display: block;
+    width: auto;
+    height: auto;
+    padding: px-to-rem(15) px-to-rem(23) px-to-rem(14);
+    clip: auto;
+    font-weight: bold;
+    line-height: normal;
+    color: $color-text-screen;
+    text-decoration: none;
+    background-color: $color-background-screen;
+    box-shadow: 0 0 2px 2px $color-screen-reader-box-shadow;
+  }
+}

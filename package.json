@@ -1,0 +1,36 @@
+{
+  "name": "@neubuild/vue-projects",
+  "version": "1.0.0",
+  "description": "An opinionated Vue.js project boilerplate for Apps, Components, and Component Libraries",
+  "main": "index.js",
+  "bin": {
+    "nuebuild-vue": "./index.js"
+  },
+  "files": [
+    "src/*",
+    "templates/*",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Vue.js",
+    "Wizard"
+  ],
+  "author": "Jason Witt",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "inquirer": "^6.2.0",
+    "lodash": "^4.17.11",
+    "npm": "^6.4.1",
+    "readline-sync": "^1.4.9"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.15.2"
+  }
+}

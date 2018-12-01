@@ -1,0 +1,23 @@
+@charset "UTF-8";
+// ========================================
+// Alignments
+// ========================================
+
+// Left Align
+.alignleft {
+	display: inline;
+	float: left;
+	margin: 0 px-to-rem($font-size-base) 0 0;
+}
+
+// Right Align
+.alignright {
+	display: inline;
+	float: right;
+	margin: 0 0 0 px-to-rem($font-size-base);
+}
+
+// Center Align
+.aligncenter {
+	@include margin-auto;
+}

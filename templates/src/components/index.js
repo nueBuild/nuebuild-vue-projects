@@ -1,0 +1,1 @@
+<% if (mode == 'component-library') { %>export { default as MyComponent } from './MyComponent.vue'<% } %><% if (mode =='component') { %>export { default as <%- componentName -%> } from './<%- componentName -%>.vue'<% } %>

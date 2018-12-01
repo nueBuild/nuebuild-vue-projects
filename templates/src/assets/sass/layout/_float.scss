@@ -1,0 +1,25 @@
+@charset "UTF-8";
+// ========================================
+// Basic
+// ========================================
+
+%float-width {
+  width: 100%;
+}
+
+.row::after {
+  display: table;
+  margin: 0;
+  clear: both;
+  content: '';
+}
+
+.row > [class^='col'] {
+  float: left;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @extend %float-width;
+  }
+}

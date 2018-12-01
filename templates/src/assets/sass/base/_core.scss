@@ -1,0 +1,27 @@
+@charset "UTF-8";
+// ========================================
+// Core
+// ========================================
+
+html {
+	@include font-legibility;
+	@include font-smoothing;
+  
+	-ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: $font-sans;
+	font-size: $font-size-base + px;
+  line-height: 1.15;
+  color: $color-text-main;
+	background-color: $color-background-body;
+}
+
+body {
+	margin: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}

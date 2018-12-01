@@ -1,0 +1,61 @@
+@charset "UTF-8";
+// ========================================
+// HTML Elements
+// ========================================
+
+// Iframes
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+hr {
+  width: auto;
+	height: px-to-px-to-rem(1);
+	margin: 0 0 px-to-rem($font-size-base) 0;
+	background-color: $color-background-hr;
+  border: none;
+}
+
+figure {
+	margin: 0;
+}
+
+// Lists
+ul,
+ol {
+	margin: 0 0 px-to-rem($font-size-base) px-to-rem($font-size-base);
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin: 0 0 0 px-to-rem($font-size-base);
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin: 0 px-to-rem($font-size-base) px-to-rem($font-size-base) 0;
+}
+
+// Tables
+table {
+  width: 100%;
+	height: auto;
+	margin: 0 0 px-to-rem($font-size-base) 0;
+}
+
+th {
+	font-weight: 700;
+}

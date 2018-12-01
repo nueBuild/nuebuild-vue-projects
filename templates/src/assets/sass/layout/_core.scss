@@ -1,0 +1,15 @@
+@charset "UTF-8";
+// ========================================
+// Column Media Queries
+// ========================================
+
+.row > [class^='col'] {
+  &.no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
