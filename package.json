@@ -1,6 +1,6 @@
 {
-  "name": "@neubuild/vue-projects",
-  "version": "1.0.0",
+  "name": "@nuebuild/vue-projects",
+  "version": "1.0.2",
   "description": "An opinionated Vue.js project boilerplate for Apps, Components, and Component Libraries",
   "main": "index.js",
   "bin": {

@@ -1,4 +1,4 @@
-# NeuBuild Vue.js Project Boilerplate
+# NueBuild Vue.js Project Boilerplate
 
 An opinionated Vue.js project boilerplate for Apps, Components, and Component Libraries
 
@@ -7,13 +7,13 @@ An opinionated Vue.js project boilerplate for Apps, Components, and Component Li
 npm Install
 
 ```javascript
-npm install -g @neubuild/vue-project
+npm install -g @nuebuild/vue-project
 ```
 
 Yarn Install
 
 ```javascript
-yarn add -g @neubuild/vue-project
+yarn add -g @nuebuild/vue-project
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ nuebuild-vue
 
 ## Prompts
 
-The wizard will promt you for the following.
+The wizard will prompt you for the following.
 
 - Project Type: Choose either App, Component, or Component Library
 - Project Name: The name of the Project e.g. *My Project* (Required)
