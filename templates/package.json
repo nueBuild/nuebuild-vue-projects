@@ -16,31 +16,20 @@
     "src/*"
   ],<% } %>
   "scripts": {
-    // Run the server for the App.
     "serve": "vue-cli-service serve",
-    // Run the server for the App with automatic eslint fix and automaticly opens in browser.
     "start": "vue-cli-service serve --fix --open",<% if (mode =='app') { %>
-    // Basic build.
     "build": "vue-cli-service build",
     "build:pre": "vue-cli-service build --preprocess",<% } %><% if (mode =='component' || mode == 'component-library') { %>
-    // Build Component and Component Library.
     "build:lib": "npm run build:unpkg & npm run build:es & npm run build:umd",
     "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/<%- projectSlug -%>.umd.js",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/<%- projectSlug -%>.esm.js",
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/<%- projectSlug -%>.min.js",<% } %>
-    // Run the vuepress server.
     "docs:dev": "vuepress dev docs",
-    // Build vuepress.
     "docs:build": "vuepress build docs",
-    // Run eslint
     "lint": "vue-cli-service lint",
-    // Run all tests.
     "test": "npm run test:unit npm run test:e2e",
-    // Run unit tests.
     "test:unit": "node node_modules/jest/bin/jest.js --clearCache && vue-cli-service test:unit",
-    // Watch unit tests.
     "test:unit:watch": "vue-cli-service npm run test:unit --watchAll --notify --notifyMode change",
-    // Run integration tests.
     "test:e2e": "vue-cli-service test:e2e --headless"
   },
   "dependencies": {
