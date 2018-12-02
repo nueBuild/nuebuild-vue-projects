@@ -1,6 +1,6 @@
-const path = require('path')
+const path = require('path')<% if (mode =='app') { %>
 const PrerenderSpaPlugin = require('prerender-spa-plugin')
-const argv = require('yargs').argv
+const argv = require('yargs').argv<% } %>
 const pkgConfig = require('./package.json')
 
 const config = {
@@ -25,7 +25,7 @@ const config = {
     plugins: [],
   },
 }
-
+<% if (mode =='app') { %>
 if (argv.preprocess) {
   config.configureWebpack.plugins.push(
     new PrerenderSpaPlugin({
@@ -40,5 +40,5 @@ if (argv.preprocess) {
     })
   )
 }
-
+<% } %>
 module.exports = config
