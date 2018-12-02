@@ -14,7 +14,7 @@ module.exports = {
       '.eslintignore',
       '.eslintrc.js',
       '.gitattributes',
-      '.gitignore',
+      '.##gitignore##',
       '.postcssrc.js',
       '.prettierignore',
       '.prettierrc.js',

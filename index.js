@@ -28,9 +28,16 @@ inquirer.prompt(questions).then(answers => {
     })
   })
 
-  // Rename Component filname.
-  if (answers.mode == 'component') {
-    Promise.all([buildFiles]).then(() => {
+  // Rename files.
+  Promise.all([buildFiles]).then(() => {
+    rename(
+      `${path.resolve('./')}/${projectName}/.##gitignore##`,
+      `${path.resolve('./')}/${projectName}/.gitignore`,
+      err => {
+        if (err) console.log('ERROR: ' + err)
+      }
+    )
+    if (answers.mode == 'component') {
       rename(
         `${path.resolve('./')}/${projectName}/src/components/MyComponent.vue`,
         `${path.resolve('./')}/${projectName}/src/components/${componentName}.vue`,
@@ -45,6 +52,6 @@ inquirer.prompt(questions).then(answers => {
           if (err) console.log('ERROR: ' + err)
         }
       )
-    })
-  }
+    }
+  })
 })
