@@ -99,6 +99,20 @@ module.exports = {
       // src/
       'src/App.vue',
       'src/main.js',
+
+      // tests/e2e/
+      'tests/e2e/plugins/index.js',
+      'tests/e2e/specs/test.js',
+      'tests/e2e/support/commands.js',
+      'tests/e2e/support/index.js',
+      'tests/e2e/.eslintrc.js',
+
+      // tests/unit/
+      'tests/unit/.eslintrc.js',
+      'tests/unit/App.spec.js',
+
+      // tests/
+      'tests/helpers.js',
     ]
 
     // public/
@@ -113,6 +127,14 @@ module.exports = {
 
       // src/views/
       files.push('src/views/Home.vue')
+
+      // tests/unit/
+      files.push('tests/unit/views/.eslintrc.js')
+      files.push('tests/unit/views/Home.spec.js')
+      files.push('tests/unit/components/copyright/Copyright.spec.js')
+      files.push('tests/unit/components/copyright/.eslintrc.js')
+      files.push('tests/unit/components/nav/MainNav.spec.js')
+      files.push('tests/unit/components/nav/.eslintrc.js')
     }
 
     if (answers.mode == 'component' || answers.mode == 'component-library') {
@@ -125,6 +147,10 @@ module.exports = {
       // src/components
       files.push('src/components/MyComponent.vue')
       files.push('src/components/index.js')
+
+      // tests/unit/
+      files.push('tests/unit/components/MyComponent.spec.js')
+      files.push('tests/unit/components/.eslintrc.js')
     }
 
     return files
