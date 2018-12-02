@@ -13,6 +13,7 @@
   "files": [
     "src/*",
     "templates/*",
+    "templates/.gitignore",
     "index.js",
     ".eslintignore",
     ".eslintrc.js",
