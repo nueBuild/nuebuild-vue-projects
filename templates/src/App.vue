@@ -11,7 +11,7 @@
 <script><% if (mode =='app') { %>
 import MainNav from './components/nav/MainNav'
 import Copyright from './components/copyright/Copyright'<% } %><% if (mode == 'component-library') { %>
-import MyComponent from './components/MyComponent'<% } %><% if (mode == 'component-library') { %>
+import MyComponent from './components/MyComponent'<% } %><% if (mode == 'component') { %>
 import <%- componentName -%> from './components/<%- componentName -%>'<% } %>
 
 export default {
