@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="my-component">
     <h1>My Comnponent</h1>
   </div>
 </template>
