@@ -11,10 +11,12 @@ const { sourcePaths, destinationPaths } = require('./src/files')
 const { questions } = require('./src/questions')
 
 inquirer.prompt(questions).then(answers => {
-  answers = Object.assign(answers, { projectSlug: lodash.kebabCase(answers.projectName) })
+  const projectName = lodash.kebabCase(answers.projectName)
+  answers = Object.assign(answers, { projectSlug: projectName })
 
   const destination = destinationPaths(answers)
   const source = sourcePaths(answers, __dirname)
+  const componentName = answers.componentName
   let buildFiles = []
 
   // Build the files.
@@ -30,8 +32,15 @@ inquirer.prompt(questions).then(answers => {
   if (answers.mode == 'component') {
     Promise.all([buildFiles]).then(() => {
       rename(
-        `${path.resolve('./')}/${lodash.kebabCase(answers.projectName)}/src/components/MyComponent.vue`,
-        `${path.resolve('./')}/${lodash.kebabCase(answers.projectName)}/src/components/${answers.componentName}.vue`,
+        `${path.resolve('./')}/${projectName}/src/components/MyComponent.vue`,
+        `${path.resolve('./')}/${projectName}/src/components/${componentName}.vue`,
+        err => {
+          if (err) console.log('ERROR: ' + err)
+        }
+      )
+      rename(
+        `${path.resolve('./')}/${projectName}/tests/unit/components/MyComponent.spec.js`,
+        `${path.resolve('./')}/${projectName}/tests/unit/components/${componentName}.spec.js`,
         err => {
           if (err) console.log('ERROR: ' + err)
         }
