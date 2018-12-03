@@ -5,7 +5,7 @@
 function install(Vue) {
   if (install.installed) return
   install.installed = true<% if (mode =='component') { %>
-  Vue.component('TestComponent', component)<% } %><% if (mode == 'component-library') { %>Object.keys(components).forEach(componentName => {
+  Vue.component('<%- componentName -%>', component)<% } %><% if (mode == 'component-library') { %>Object.keys(components).forEach(componentName => {
     Vue.component(componentName, components[componentName])
   })<% } %>
 }
