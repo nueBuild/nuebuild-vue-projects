@@ -26,7 +26,7 @@ if (typeof window !== 'undefined') {
 if (GlobalVue) {
   GlobalVue.use(plugin)
 }
-<% if (mode =='app') { %>
-export default component;<% } %><% if (mode =='component' || mode == 'component-library') { %>
+<% if (mode =='component') { %>
+export default component;<% } %><% if (mode == 'component-library') { %>
 export * from './components/index'
 <% } %>

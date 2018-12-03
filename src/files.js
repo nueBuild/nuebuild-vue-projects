@@ -146,11 +146,14 @@ module.exports = {
 
       // src/components
       files.push('src/components/MyComponent.vue')
-      files.push('src/components/index.js')
 
       // tests/unit/
       files.push('tests/unit/components/MyComponent.spec.js')
       files.push('tests/unit/components/.eslintrc.js')
+    }
+
+    if (answers.mode == 'component-library') {
+      files.push('src/components/index.js')
     }
 
     return files
